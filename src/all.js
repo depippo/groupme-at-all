@@ -5,13 +5,6 @@ const room_id = process.env.HUBOT_GROUPME_ROOM_ID;
 const bot_id = process.env.HUBOT_GROUPME_BOT_ID;
 const token = process.env.HUBOT_GROUPME_TOKEN;
 
-var express = require('express')
-var app = express()
- 
-app.get('/', function (req, res) {
-  res.send('Hello World')
-})
-
 if (!room_id || !bot_id || !token) {
   console.error(
     `@all ERROR: Unable to read full environment.
